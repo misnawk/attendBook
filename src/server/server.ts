@@ -12,12 +12,14 @@ app.use(bodyParser.json());
 
 const connection = mysql.createConnection({
   host: "attend-book.mysql.database.azure.com",
-  user: "rooroot_attendBookt",
+  user: "root_attendBook",
   password: "qwer1234@",
   database: "attendance",
-  timezone: "Z", // 'Z'는 UTC 시간대를 의미
+  timezone: "Z",
+  ssl: {
+    rejectUnauthorized: true,
+  },
 });
-
 //연결 오류시 에러메시지 출력
 connection.connect((err: QueryError | null) => {
   if (err) {
