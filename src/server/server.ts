@@ -11,10 +11,10 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "qwer1234",
-  database: "reactspring",
+  host: "attend-book.mysql.database.azure.com",
+  user: "rooroot_attendBookt",
+  password: "qwer1234@",
+  database: "attendance",
   timezone: "Z", // 'Z'는 UTC 시간대를 의미
 });
 

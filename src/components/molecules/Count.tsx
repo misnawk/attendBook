@@ -132,11 +132,7 @@ const Count = ({ selectedDateId }: CountProps) => {
 
     setAttendanceCounts((prevCounts) => {
       const newCounts = { ...prevCounts };
-      // if (prevStatus !== -1) {
-      //   newCounts[
-      //     prevStatus === 2 ? "출석" : prevStatus === 1 ? "지각" : "결석"
-      //   ]--;
-      // }
+    
       if (
         prevStatus !== "" &&
         newCounts[

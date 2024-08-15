@@ -17,13 +17,15 @@ const LoginForm = () => {
         id,
         pwd,
       });
+      console.log(id, pwd);
+
       if (response.data === "로그인 성공") {
         navigate("/mainpage"); // 로그인 성공 시 '/main' 페이지로 이동
       } else {
-        alert("로그인 실패 ");
+        alert("로그인 실패 1");
       }
     } catch (error) {
-      alert("로그인 실패 ");
+      alert("로그인 실패 2");
     }
   };
 
